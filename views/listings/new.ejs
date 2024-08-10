@@ -1,0 +1,66 @@
+<% layout('/layouts/boilerplate') -%>
+        <div class="row mt-3">
+            <div class="col-8 offset-2">
+                <h3>Create New Listing</h3>
+                <form action="/listings" method="post" class="needs-validation" enctype="multipart/form-data" novalidate>
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input name="listing[title]" placeholder="Add a Catchy title" type="text" class="form-control" required>
+                        <div class="valid-feedback">
+                            Title's Looks Good
+                          </div>
+                          <div class="invalid-feedback">Please Enter A <Title></Title> Description</div>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea name="listing[description]" placeholder="enter description"
+                            class="form-control" required></textarea>
+                            <div class="invalid-feedback">Please Enter A Valid Description</div>
+                    </div>
+
+                    <!-- <div class="mb-3">
+                        <label for="image" class="form-label">Image</label>
+                        <input name="listing[image]" placeholder="enter image Url/link" type="text"
+                            class="form-control">
+                    </div> -->
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Upload Listing Image</label>
+                        <input name="listing[image]" type="file"
+                            class="form-control" required>
+                    </div>
+
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label for="price" class="form-label">Price</label>
+                            <input name="listing[price]" placeholder="1200" type="number"  class="form-control" required>
+                            <div class="invalid-feedback">Please Enter A Valid Price</div>
+
+                        </div>
+
+                        <div class="mb-3 col-md-8">
+                            <label for="country" class="form-label">country</label>
+                            <input name="listing[country]" placeholder="India" type="text" class="form-control" required>
+                            <div class="invalid-feedback">Please Enter A Valid country</div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="location" class="form-label">location</label>
+                        <input name="listing[location]" placeholder="Nashik, maharashtra" type="text"
+                            class="form-control" required>
+                            <div class="invalid-feedback">Please Enter A Valid location</div>
+                    </div>
+                    <button class="btn btn-dark add-btn ">Add</button> 
+                    <!-- add mt-3 class if you want -->
+                </form>
+            </div>
+        </div>
+
+
+
+        <!-- 
+we make all varible asobjest and pass through a key value pair
+ -->
